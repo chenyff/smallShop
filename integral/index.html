@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>积分查询</title>
+    <link href="lib/css/bootstrap.min.css" rel="stylesheet">
+    <script src="lib/js/jquery-1.9.1.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="lib/laydate/laydate.js"></script>
+  </head>
+  <body>
+  	    <!--顶部导航-->
+		    <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">浪矢杂货店</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul id="navUl" class="nav navbar-nav">
+                <li><a href="/">积分管理</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!--中间图书列表-->
+        <div class="container">
+		      <div class="row" style="margin-bottom: 15px;">
+		          <div class="col-lg-7" id="operation">
+		            <!-- menu -->
+		                <ul class="nav nav-pills">
+		                      <li><a id="newBtn" href="javascript:;">新增用户</a></li>
+		                      <li><a id="updateBtn" href="javascript:;">修改信息</a></li>
+		                      <li><a id="delBtn" href="javascript:;">删除用户</a></li>
+		                </ul>
+		            <!-- menu -->
+		          </div>
+		          <div class="col-lg-5">
+		          	
+		            <div class="input-group">
+		              <input type="text" class="form-control" id="searchVal" placeholder="输入你想找的书名">
+		              <span class="input-group-btn">
+		                <button class="btn btn-default" id="searchBtn" type="button">Go!</button>
+		              </span>
+		            </div>
+		          </div>
+		        </div>
+		        
+		        <table id="gTable" class="table table-bordered table-striped table-hover">
+		        	
+		            <thead>
+		                <tr>
+		                    <th><input type="checkbox" /></th>
+		                    <th>编号</th>
+		                    <th>用户名</th>
+		                    <th>持有积分</th>
+		                </tr>
+		            </thead>
+		            <tbody>
+		            	
+							<tr>
+								 <td><input  type="checkbox" /></td>
+			                     <td></td>
+			                     <td></td>
+			                     <td></td>
+                		  </tr>
+		            </tbody>
+		        </table>
+		        <nav aria-label="Page navigation" class="clearfix">
+		        	  
+		            <ul id="pagination" class="pagination pull-right" style="margin-top: 0;">
+		             
+		            </ul>
+		            <div class="allNumber">总共：</div> 
+		        </nav>
+		        
+		</div>
+
+		<!--这是增加书籍与修改书籍用的板块-->
+		<div class="modal fade" id="myModal">
+		      <div class="modal-dialog" role="document">
+		        <div class="modal-content">
+		          <div class="modal-header">
+		            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		            <h4 class="modal-title" id="myModalLabel">新增用户</h4>
+		          </div>
+		          <div class="modal-body">
+		            <form class="form-horizontal">
+		                <div class="form-group">
+		                  <label class="col-sm-2 control-label">编号</label>
+		                  <div class="col-sm-6">
+		                    <input type="text" class="form-control" id="userNumber">
+		                    <input type="hidden" id="gid"/>
+		                  </div>
+		                </div>
+		                <div class="form-group">
+		                  <label class="col-sm-2 control-label">用户名</label>
+		                  <div class="col-sm-6">
+		                    <input type="text" class="form-control" id="userName" placeholder="请输入用户名（微信号）">
+		                  </div>
+		                </div>
+		                <div class="form-group">
+		                  <label class="col-sm-2 control-label">积分</label>
+		                  <div class="col-sm-6">
+		                    <input type="text" class="form-control" id="userIntegral">
+		                  </div>
+		                </div>
+		            </form>
+		          </div>
+		          <div class="modal-footer">
+		            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+		            <button type="button" class="btn btn-primary saveMess">保存</button>
+		          </div>
+		        </div>
+		      </div>
+		</div>
+		
+		<script type="text/javascript" src="lib/js/layer.js"></script>
+		<script type="text/javascript" src="lib/js/goods.js"></script>
+	</body>
+</html>
